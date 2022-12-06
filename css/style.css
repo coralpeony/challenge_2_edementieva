@@ -1,23 +1,262 @@
+:root {
+  --background-color: cadetblue;
+  --font: coral;
+}
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  background-color: #d9dcd6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--font);
+
+}
+
+a:hover {
+  background-color: aquamarine;
+}
+
+
+header {
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--background-color);
+
+}
+
+
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+  color: var(--font);
+
+}
+
+
+
+
+header div {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+header div ul li {
+  display: inline-block;
+  margin-left: 25px;
 }
 
 p {
-  margin: 0;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+p:hover {
+  background-color: var(--font);
+}
+
+.avatarRow {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.avatar {
+  height: 300px;
+  width: 20%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-image: url("../images/emoji-icon-glossy-00-00-person-person-woman-red-with-layered-cut-fitz-1-2-72dpi-forPersonalUseOnly.png");
+  background-size: cover;
+  background-position-y: center;
+}
+
+.avatar h2 {
+
+  float: right;
+  background-color: var(--background-color);
+  padding: 15px;
+  height: 15px;
+  color: #d9dcd6;
+  font-size: 18px;
+  border-bottom: 15px solid var(--font);
+
+}
+
+.row {
+  display: flex;
+}
+
+.spaces {
+  margin-top: 20px;
+  margin-left: 5%;
+  border-style: solid;
+  border-right-width: 3;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.spaces h3 {
+  margin-bottom: 200px;
+  margin-right: 25px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.content {
+  margin-top: 20px;
+  margin-left: 8%;
+  padding: 40px;
+  height: 200px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--background-color);
+  color: #d9dcd6;
+  width: fit-content;
+
+}
+
+.categoryGridArea {
+  background-position: initial;
+  margin: 10px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+
+.work {
+  margin: 5px;
+  margin-left: 10%;
+  display: grid;
+  grid-template-rows: 500px 200px 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "one one"
+    "two three"
+    "four five"
+  ;
+  width: 100%;
+}
+
+#one {
+  grid-area: one;
+  background-image: url("../images/challenge1.png");
+  position: relative;
+
+}
+
+#two {
+  grid-area: two;
+  background-image: url("../images/02-portfolio-2.jpg");
+  position: relative;
+
+}
+
+#three {
+  grid-area: three;
+  background-image: url("../images/02-portfolio-3.jpg");
+  position: relative;
+
+}
+
+#four {
+  grid-area: four;
+  background-image: url("../images/02-portfolio-4.jpg");
+  position: relative;
+
+}
+
+#five {
+  grid-area: five;
+  background-image: url("../images/02-run-buddy.jpg");
+  position: relative;
+
+}
+
+
+
+.heading {
+  background-color: var(--background-color);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 15px solid var(--font);
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+.contact_me {
+  padding-top: 60px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 8%;
+  padding: 40px;
+  height: 100px;
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  background-color: var(--background-color);
+  color: #d9dcd6;
+  float: right;
+
+
+}
+
+.contact_me nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+
+@media screen and (max-width: 768px) {
+
+  .avatarRow,
+  .row {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .work {
+    margin: 5px;
+    margin-left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+    ;
+    width: 100%;
+  }
+
+  .contact_me nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
