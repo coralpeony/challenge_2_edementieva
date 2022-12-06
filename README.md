@@ -16,7 +16,7 @@ N/A
 
 The website is built using HTML and CSS. To review the code, open the Chrome DevTools by pressing Command+Option+I (macOS) or Control+Shift+I (Windows). A console panel should open either below or to the side of the webpage in the browser. 
 
-![My Profile](../challenge_2/images/screenshot.png)
+![My Profile](assets/images/screenshot.png)
 
 https://coralpeony.github.io/challenge_two_edementieva/
 
